@@ -42,3 +42,7 @@ cat run_docker_image.sh  <br>
 /workspace# export CUDA_VISIBLE_DEVICES=0,1<br>
 /workspace# cd tools/inference/<br>
 /workspace# /workspace/tools/inference# ./run_infer_notebook.sh<br>
+
+---
+방법4)  <br>
+https://github.com/AvishakeAdhikary/Text-To-Image-Generator?tab=readme-ov-file
