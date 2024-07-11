@@ -21,6 +21,10 @@ streamlit run app.py<br>
 ---
 방법3)  <br>
 DALLE_Mini<br>
-
 https://www.youtube.com/watch?v=OqEuEe-xSKk
+
+python3 -m venv venv
+source venv/Scripts/activate
+cd 폴더명
+(terminal) wsl --install 
 
