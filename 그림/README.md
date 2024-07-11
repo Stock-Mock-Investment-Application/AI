@@ -29,6 +29,8 @@ source venv/Scripts/activate <br>
 cd 폴더명 <br>
 (terminal) wsl --install  <br>
 git clone https://github.com/borisdayma/dalle-mini.git <br>
+
+cd dalle-mini<br>
 docker ps <br>
 
 윈도우에서 desktop docker 들어가기 <br>
