@@ -21,6 +21,7 @@ streamlit run app.py<br>
 ---
 방법3)  <br>
 DALLE_Mini<br>
+https://github.com/borisdayma/dalle-mini
 https://www.youtube.com/watch?v=OqEuEe-xSKk <br>
 
 python3 -m venv venv <br>
