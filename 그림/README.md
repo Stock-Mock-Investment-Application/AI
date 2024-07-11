@@ -28,10 +28,11 @@ python3 -m venv venv <br>
 source venv/Scripts/activate <br>
 cd 폴더명 <br>
 (terminal) wsl --install  <br>
-git clone https://github.com/borisdayma/dalle-mini.git
-docker ps
-cd Docker 
-./build_docker.sh
-cd ..
-cat run_docker_image.sh 
-./run_docker_image.sh 
+git clone https://github.com/borisdayma/dalle-mini.git <br>
+docker ps <br>
+cd Docker  <br>
+./build_docker.sh <br>
+cd .. <br>
+cat run_docker_image.sh  <br>
+./run_docker_image.sh  <br>
+ <br>
