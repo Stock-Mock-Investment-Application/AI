@@ -38,3 +38,7 @@ cd .. <br>
 cat run_docker_image.sh  <br>
 ./run_docker_image.sh  <br>
  <br>
+/workspace# nvidia-smi<br>
+/workspace# export CUDA_VISIBLE_DEVICES=0,1<br>
+/workspace# cd tools/inference/<br>
+/workspace# /workspace/tools/inference# ./run_infer_notebook.sh<br>
