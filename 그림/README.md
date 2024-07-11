@@ -25,6 +25,7 @@ https://github.com/borisdayma/dalle-mini
 https://www.youtube.com/watch?v=OqEuEe-xSKk <br>
 
 (terminal) wsl --install  <br>
+우분투 나갈 때는 exit <br>
 git clone https://github.com/borisdayma/dalle-mini.git <br>
 
 cd dalle-mini<br>
