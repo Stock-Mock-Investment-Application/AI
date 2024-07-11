@@ -30,6 +30,8 @@ cd 폴더명 <br>
 (terminal) wsl --install  <br>
 git clone https://github.com/borisdayma/dalle-mini.git <br>
 docker ps <br>
+
+윈도우에서 desktop docker 들어가기 <br>
 cd Docker  <br>
 ./build_docker.sh <br>
 cd .. <br>
