@@ -24,7 +24,7 @@ DALLE_Mini<br>
 https://github.com/borisdayma/dalle-mini
 https://www.youtube.com/watch?v=OqEuEe-xSKk <br>
 
-python3 -m venv venv <br>
+python -m venv venv <br>
 source venv/Scripts/activate <br>
 cd 폴더명 <br>
 (terminal) wsl --install  <br>
