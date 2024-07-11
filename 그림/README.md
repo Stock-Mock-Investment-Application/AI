@@ -12,7 +12,7 @@ imageCraft<br>
 실행 가능. API Key가 필요함. <br>
 무료로 사용할 수 있는 다른 버전 알아보기 <br>
 <br>
-python3 -m venv venv <br>
+python -m venv venv <br>
 source venv/Scripts/activate <br>
 cd 폴더명<br>
 pip install -r requirements.txt<br>
