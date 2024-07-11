@@ -18,3 +18,9 @@ cd 폴더명<br>
 pip install -r requirements.txt<br>
 streamlit run app.py<br>
 
+---
+방법3)  <br>
+DALLE_Mini<br>
+
+https://www.youtube.com/watch?v=OqEuEe-xSKk
+
