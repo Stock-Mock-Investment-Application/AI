@@ -45,4 +45,15 @@ cat run_docker_image.sh  <br>
 
 ---
 방법4)  <br>
-https://github.com/AvishakeAdhikary/Text-To-Image-Generator?tab=readme-ov-file
+https://github.com/AvishakeAdhikary/Text-To-Image-Generator?tab=readme-ov-file<br>
+
+가능하긴 한데, 이미지가 추출되는 때까지 너무 많은 시간이 걸림. 
+좀 더 최적화 된 모델이 필요 
+
+---
+방법5)  <br>
+https://github.com/segmind/segmind-npm <br>
+
+segmind-npm 패키지 <br>
+데이터 학습이 잘 되어있고, 이미지를 방법 4보다 빠르게 생성 가능 <br>
+원리는 CNN <br>
