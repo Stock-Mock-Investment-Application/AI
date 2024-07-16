@@ -1,0 +1,5 @@
+ㅇ AI로 소설쓰기 참고 사이트 
+
+< AI dungeon >
+https://play.aidungeon.io/
+https://github.com/latitudegames/AIDungeon?tab=readme-ov-file
