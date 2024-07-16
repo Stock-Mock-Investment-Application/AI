@@ -9,7 +9,7 @@ import RecentResults from "../components/RecentResults";
 const Home = () => {
   const [showLoader, setShowLoader] = useState(false);
   const [imageResult, setImageResult] = useState(null);
-  const [promptQuery, setPromptQuery] = useState("");
+  const [inputFields, setInputFields] = useState(Array(7).fill(""));
   const [radioValue, setRadioValue] = useState("20");
   const [dropDownValue, setDropDownValue] = useState("DDIM");
   const [seedValue, setSeedValue] = useState(17123564234);
@@ -25,8 +25,10 @@ const Home = () => {
     };
   }, [loaderMessage]);
 
-  const handleSearch = (event) => {
-    setPromptQuery(event.target.value);
+  const handleInputChange = (index, event) => {
+    const newInputFields = [...inputFields];
+    newInputFields[index] = event.target.value;
+    setInputFields(newInputFields);
   };
 
   const handleChange = (event) => {
@@ -47,6 +49,7 @@ const Home = () => {
   const fetchData = async () => {
     try {
       setShowLoader(true);
+      const promptQuery = inputFields.join(" ");
 
       const imageBlob = await fetchImages(
         promptQuery,
@@ -73,29 +76,18 @@ const Home = () => {
 
   const handleSurpriseMe = (e) => {
     const surprisePrompt = getRandom(promptIdeas);
-    setPromptQuery(surprisePrompt);
+    setInputFields([surprisePrompt, "", "", "", "", "", ""]);
   };
 
   const handleAvailOptions = (option) => {
-    setPromptQuery(option);
+    setInputFields([option, "", "", "", "", "", ""]);
   };
 
   return (
     <div>
       <NavBar />
       <div className="surpriseBox">
-        <label>일러스트 만들기</label>
-      </div>
-      <div>
-        <input
-          type="text"
-          id="prompt"
-          value={promptQuery}
-          onChange={handleSearch}
-          placeholder="예시 글을 적어주세요"
-          className="promptInput"
-        />
-        <button onClick={handleSurpriseMe}>키워드 추천</button>
+        <label>캐릭터 생성</label>
       </div>
       <div className="formBox">
         <div className="formValue">
@@ -149,6 +141,21 @@ const Home = () => {
         </div>
       </div>
       <div>
+        <div className="customize">
+          {inputFields.map((input, index) => (
+            <input
+              key={index}
+              type="text"
+              value={input}
+              onChange={(e) => handleInputChange(index, e)}
+              placeholder={`예시 글 ${index + 1}`}
+              className="promptInput"
+            />
+          ))}
+        </div>
+        <button onClick={handleSurpriseMe}>키워드 추천</button>
+      </div>
+      <div>
         <button onClick={handleGenerate}>삽화 생성</button>
       </div>
 
@@ -156,12 +163,12 @@ const Home = () => {
         <div style={{ margin: 40 }}>기다려주세요... ⚡️⚡️⚡️</div>
       ) : (
         <>
-          <ImageBox promptQuery={promptQuery} imageResult={imageResult} />
+          <ImageBox promptQuery={inputFields.join(" ")} imageResult={imageResult} />
         </>
       )}
       <ChooseResults onSelect={handleAvailOptions} />
       <RecentResults
-        promptQuery={promptQuery}
+        promptQuery={inputFields.join(" ")}
         imageResult={imageResult}
         onSelect={handleAvailOptions}
       />
