@@ -92,7 +92,7 @@ const Home = () => {
           id="prompt"
           value={promptQuery}
           onChange={handleSearch}
-          placeholder="A plush toy robot sitting against a yellow wall"
+          placeholder="예시 글을 적어주세요"
           className="promptInput"
         />
         <button onClick={handleSurpriseMe}>키워드 추천</button>
