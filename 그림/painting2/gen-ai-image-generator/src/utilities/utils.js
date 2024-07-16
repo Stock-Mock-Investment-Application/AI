@@ -4,14 +4,14 @@ export const getRandom = (items) => {
 };
 
 export const promptIdeas = [
-  "calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution",
-  "An armchair in the shape of an avocado  3d render, pixar style, 8k, high resolution",
-  "A 3D render of an astronaut walking in a green desert",
-  "An abstract oil painting of a river",
-  "A Shiba Inu dog wearing a beret and black",
-  "Enchanted Forest",
-  "Underwater Paradise",
-  "Cosmic Dreams",
+  "dog",
+  "girl",
+  "ocean",
+  "river",
+  "mountain",
+  "shopping",
+  "king",
+  "princess",
 ];
 
 export const loaderMessages = [

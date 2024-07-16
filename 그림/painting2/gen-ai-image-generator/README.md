@@ -1,6 +1,1 @@
-##SegMind
-
-npm install
-
-npm star
-
+ssafy C107

@@ -5,7 +5,8 @@ import { fetchImages } from "../services/model-api";
 import { getRandom, loaderMessages, promptIdeas } from "../utilities/utils";
 import ChooseResults from "../components/ChooseResults";
 import RecentResults from "../components/RecentResults";
-import "./Home.css"; // CSS 파일 import
+import "./Home.css"; 
+// ssafy C107
 
 const Home = () => {
   const [showLoader, setShowLoader] = useState(false);
@@ -104,6 +105,7 @@ const Home = () => {
   };
 
   return (
+    
     <div className="home-container">
       <NavBar />
       <div className="first">
