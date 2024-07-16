@@ -29,9 +29,6 @@ https://dev.to/techygeeky/create-your-own-genai-image-generator-app-like-midjour
 4) Add i18n localization to the project using react-i18next.
 5) Write Unit Test cases using @testing-library/react.
 
-## App Snapshot:
-![App Snapshot](GenAI-Image-Generator.png)
-
 ## Available Scripts
 
 Inside the project directory in respective command line, you can run:
