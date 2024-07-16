@@ -5,17 +5,16 @@ import { fetchImages } from "../services/model-api";
 import { getRandom, loaderMessages, promptIdeas } from "../utilities/utils";
 import ChooseResults from "../components/ChooseResults";
 import RecentResults from "../components/RecentResults";
+import "./Home.css"; // CSS 파일 import
 
 const Home = () => {
-
   const [showLoader, setShowLoader] = useState(false);
   const [imageResult, setImageResult] = useState(null);
-  const [inputFields, setInputFields] = useState(["", "", "", "", "", "", "", ""]); // 수정된 부분
+  const [inputFields, setInputFields] = useState(["", "", "", "", "", "", "", ""]); 
   const [radioValue, setRadioValue] = useState("20");
   const [dropDownValue, setDropDownValue] = useState("DDIM");
   const [seedValue, setSeedValue] = useState(17123564234);
   const [loaderMessage, setLoaderMessage] = useState(loaderMessages[0]);
-
 
   useEffect(() => {
     const loaderInterval = setInterval(() => {
@@ -27,13 +26,11 @@ const Home = () => {
     };
   }, [loaderMessage]);
 
-
   const handleInputChange = (index, event) => {
     const newInputFields = [...inputFields];
     newInputFields[index] = event.target.value;
     setInputFields(newInputFields);
   };
-
 
   const handleChange = (event) => {
     if (event.target.name === "radio") {
@@ -65,13 +62,11 @@ const Home = () => {
     }
   };
 
-
   const handleGenerate = async (e) => {
     e.preventDefault();
     await fetchData();
   };
 
-  
   const fetchData = async () => {
     try {
       setShowLoader(true);
@@ -94,27 +89,24 @@ const Home = () => {
       fileReaderInstance.readAsDataURL(imageBlob);
       setShowLoader(false);
     } catch (error) {
-     
       console.error("Error fetching images from API:", error);
       setShowLoader(false);
     }
   };
-
 
   const handleSurpriseMe = () => {
     const surprisePrompt = getRandom(promptIdeas);
     setInputFields([surprisePrompt, "", "", "", "", "", "", ""]); 
   };
 
-
   const handleAvailOptions = (option) => {
     setInputFields([option, "", "", "", "", "", "", ""]); 
   };
 
-
   return (
-    <div>
+    <div className="home-container">
       <NavBar />
+      <div className="first">
       <div className="surpriseBox">
         <label>캐릭터 생성</label>
       </div>
@@ -172,86 +164,86 @@ const Home = () => {
           />
         </div>
       </div>
-      <div>
-        <div className="customize">
-          <input
-            type="text"
-            value={inputFields[0]}
-            onChange={(e) => handleInputChange(0, e)}
-            placeholder={`이름`}
-            className="promptInput"
-          />
-          <input
-            type="text"
-            value={inputFields[1]}
-            onChange={(e) => handleInputChange(1, e)}
-            placeholder={`국가`}
-            className="promptInput"
-          />
-          <input
-            type="text"
-            value={inputFields[2]}
-            onChange={(e) => handleInputChange(2, e)}
-            placeholder={`얼굴형`}
-            className="promptInput"
-          />
-          <input
-            type="text"
-            value={inputFields[3]}
-            onChange={(e) => handleInputChange(3, e)}
-            placeholder={`머리색`}
-            className="promptInput"
-          />
-          <input
-            type="text"
-            value={inputFields[4]}
-            onChange={(e) => handleInputChange(4, e)}
-            placeholder={`옷`}
-            className="promptInput"
-          />
-          <input
-            type="text"
-            value={inputFields[5]}
-            onChange={(e) => handleInputChange(5, e)}
-            placeholder={`배경`}
-            className="promptInput"
-          />
-          <input
-            type="text"
-            value={inputFields[6]}
-            onChange={(e) => handleInputChange(6, e)}
-            placeholder={`이 외 특징`}
-            className="promptInput"
-          />
+      </div>
+
+      <div className="split-container">
+        <div className="leftpart">
+          <div>
+            <div className="customize">
+              <input
+                type="text"
+                value={inputFields[0]}
+                onChange={(e) => handleInputChange(0, e)}
+                placeholder={`이름`}
+                className="promptInput"
+              />
+              <input
+                type="text"
+                value={inputFields[1]}
+                onChange={(e) => handleInputChange(1, e)}
+                placeholder={`국가`}
+                className="promptInput"
+              />
+              <input
+                type="text"
+                value={inputFields[2]}
+                onChange={(e) => handleInputChange(2, e)}
+                placeholder={`얼굴형`}
+                className="promptInput"
+              />
+              <input
+                type="text"
+                value={inputFields[3]}
+                onChange={(e) => handleInputChange(3, e)}
+                placeholder={`머리색`}
+                className="promptInput"
+              />
+              <input
+                type="text"
+                value={inputFields[4]}
+                onChange={(e) => handleInputChange(4, e)}
+                placeholder={`옷`}
+                className="promptInput"
+              />
+              <input
+                type="text"
+                value={inputFields[5]}
+                onChange={(e) => handleInputChange(5, e)}
+                placeholder={`배경`}
+                className="promptInput"
+              />
+              <input
+                type="text"
+                value={inputFields[6]}
+                onChange={(e) => handleInputChange(6, e)}
+                placeholder={`이 외 특징`}
+                className="promptInput"
+              />
+            </div>
+            <div>
+              <button onClick={handleGenerate}>그림 그리기</button>
+            </div>
+          </div>
         </div>
 
+        <div className="rightpart">
+          {showLoader ? (
+            <div style={{ margin: 40 }}>기다려주세요... ⚡️⚡️⚡️</div>
+          ) : (
+            <>
+              <ImageBox promptQuery={inputFields.join(" ")} imageResult={imageResult} />
+            </>
+          )}
+        </div>
       </div>
-      <div>
-        <button onClick={handleGenerate}>그림 그리기</button>
-      </div>
-
-
-      {showLoader ? (
-        <div style={{ margin: 40 }}>기다려주세요... ⚡️⚡️⚡️</div>
-      ) : (
-
-        <>
-          <ImageBox promptQuery={inputFields.join(" ")} imageResult={imageResult} />
-        </>
-      )}
 
       <ChooseResults onSelect={handleAvailOptions} /> 
-
-   
       <RecentResults
         promptQuery={inputFields.join(" ")} 
         imageResult={imageResult}
         onSelect={handleAvailOptions}
       />
-
-
       <div className="slideShowMessage">{loaderMessage}</div>
-
       <div className="footer">SSAFY 7조</div>
     </div>
   );
