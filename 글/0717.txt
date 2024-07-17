@@ -1,13 +1,14 @@
 
-essay-outline-generator-openai
+ㅇ essay-outline-generator-openai
 https://github.com/brahmantiodiaz/essay-outline-generator-openai?tab=readme-ov-file
 
-AI-Writer
+ㅇ AI-Writer
 https://github.com/AJaySi/AI-Writer
 
+ㅇ neurowriter
 https://github.com/albarji/neurowriter?tab=readme-ov-file
 
-
+ㅇ Text-Generator
 https://github.com/atakanyeniceli/Text-Generator
 
 스토리가 학습이 되어있지 않아서, AI가 그냥 연관이 없는 단어들을 나열하는 수준 
