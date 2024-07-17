@@ -9,3 +9,5 @@ https://github.com/albarji/neurowriter?tab=readme-ov-file
 
 
 https://github.com/atakanyeniceli/Text-Generator
+
+스토리가 학습이 되어있지 않아서, AI가 그냥 연관이 없는 단어들을 나열하는 수준 
