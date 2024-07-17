@@ -4,3 +4,5 @@ https://github.com/brahmantiodiaz/essay-outline-generator-openai?tab=readme-ov-f
 
 AI-Writer
 https://github.com/AJaySi/AI-Writer
+
+https://github.com/albarji/neurowriter?tab=readme-ov-file
