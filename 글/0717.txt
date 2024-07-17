@@ -6,3 +6,6 @@ AI-Writer
 https://github.com/AJaySi/AI-Writer
 
 https://github.com/albarji/neurowriter?tab=readme-ov-file
+
+
+https://github.com/atakanyeniceli/Text-Generator
