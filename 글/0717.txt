@@ -1,3 +1,6 @@
 
 essay-outline-generator-openai
 https://github.com/brahmantiodiaz/essay-outline-generator-openai?tab=readme-ov-file
+
+AI-Writer
+https://github.com/AJaySi/AI-Writer
