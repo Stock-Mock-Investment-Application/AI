@@ -1,0 +1,96 @@
+To execute the provided project in Visual Studio Code (VS Code), follow these steps:
+
+Prerequisites
+Install Visual Studio Code: If you haven't installed it yet, download it from here.
+Install Anaconda: Download and install Anaconda from here. This will provide you with the necessary Python distribution.
+Install Docker: If you plan to use Docker, download and install it from here.
+Steps
+1. Clone the Repository
+Open a terminal in VS Code and clone the repository:
+
+bash
+코드 복사
+git clone https://github.com/albarji/neurowriter.git
+cd neurowriter
+2. Setup Anaconda Environment
+Create and activate an Anaconda environment:
+
+bash
+코드 복사
+conda create -n neurowriter python=3.8
+conda activate neurowriter
+3. Install Dependencies
+Ensure you have make installed on your system. If not, install it using Anaconda:
+
+bash
+코드 복사
+conda install -c anaconda make
+Run the installation command:
+
+bash
+코드 복사
+make install
+If you want to build the project with GPU support, use:
+
+bash
+코드 복사
+make install-gpu
+4. Open the Project in VS Code
+Open the cloned repository in VS Code by selecting File > Open Folder and navigating to the neurowriter directory.
+
+5. Prepare the Corpus
+Prepare your corpus files as described in the README (Single text, Multiline text, CSV, JSON).
+
+6. Tokenize the Corpus
+Run the tokenizecorpus.py script to tokenize the corpus. You can do this in the terminal within VS Code:
+
+bash
+코드 복사
+python tokenizecorpus.py path/to/corpus.txt corpus_format output_tokenized_file.json
+Replace path/to/corpus.txt, corpus_format, and output_tokenized_file.json with your actual file paths and desired output filename.
+
+7. Train the Generator
+Run the train.py script to train the text generator:
+
+bash
+코드 복사
+python train.py output_tokenized_file.json json model_encodings.enc model_weights.h5
+Replace output_tokenized_file.json, model_encodings.enc, and model_weights.h5 with your actual file paths.
+
+8. Generate Text
+Run the generate.py script to generate text:
+
+bash
+코드 복사
+python generate.py model_weights.h5 model_encodings.enc
+Replace model_weights.h5 and model_encodings.enc with your actual file paths.
+
+9. Docker Deployment (Optional)
+If you prefer to use Docker, build the Docker image:
+
+bash
+코드 복사
+make build-image
+Or with GPU support:
+
+bash
+코드 복사
+make build-image-gpu
+To run the Docker container:
+
+bash
+코드 복사
+docker run -it --rm -v $(pwd)/output:/output neurowriter
+This mounts the output directory of the current project to the container to store results.
+
+Debugging and Running in VS Code
+Set Up Python Interpreter: Ensure the Python interpreter for the Anaconda environment is selected in VS Code. Go to the Command Palette (Ctrl+Shift+P), type Python: Select Interpreter, and choose the neurowriter environment.
+Run Scripts: You can run and debug Python scripts directly in VS Code. Open the script you want to run, and press F5 to start debugging.
+Summary
+By following these steps, you should be able to set up and run the Neurowriter project in Visual Studio Code, either locally or using Docker. The steps include cloning the repository, setting up an Anaconda environment, installing dependencies, preparing the corpus, tokenizing the corpus, training the model, and generating text. Optionally, Docker can be used for deployment.
+
+
+
+
+
+
