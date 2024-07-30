@@ -1,0 +1,7 @@
+Text to text
+
+Hugging Chat 
+https://github.com/mlabonne/llm-course
+
+이용한 github
+https://github.com/TimMikeladze/huggingface?tab=readme-ov-file
