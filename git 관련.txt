@@ -1,0 +1,21 @@
+Front-dev
+git clone 
+git swich -t front-dev
+git pull
+
+로컬에만 생긴 상태임
+git checkout -b front-AI
+git add .
+git commit -m  'feat() : '
+git push origin front-AI
+
+▶ git branch 네이밍 컨벤션
+[back or front or test] / [작업 ex) feat, fix, test ] / [ 기능 요약 ex) user-xxx ]
+feat : 새로운 기능 추가 
+fix : 버그 수정
+test : 테스트 
+front/feat/AI
+
+
+feat(login): 로그인 기능 구현
+로그인 페이지를 추가하고, 사용자 인증 로직을 구현했습니다.
