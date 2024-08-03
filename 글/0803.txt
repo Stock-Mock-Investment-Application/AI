@@ -2,3 +2,10 @@ HuggingFace Open LLM react
 
 
 https://www.youtube.com/watch?v=Ay3S3UP7rKY
+
+
+import { HfInference } from '@huggingface/inference';
+// 'meta-llama/Meta-Llama-3-8B-Instruct'
+//  gpt2
+// HuggingFaceH4/zephyr-7b-beta
+https://github.com/huggingface/text-generation-inference
