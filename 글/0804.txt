@@ -2,3 +2,6 @@ https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407
 
 
 https://github.com/ElonMusk2002/chat-huggingface
+
+How to add language translation feature to your React web application
+https://medium.com/@dcsenadheera777/how-to-add-language-translation-feature-to-your-react-web-application-f28346f4fe27
