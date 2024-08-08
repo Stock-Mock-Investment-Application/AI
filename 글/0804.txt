@@ -10,3 +10,4 @@ https://medium.com/@dcsenadheera777/how-to-add-language-translation-feature-to-y
 
 스토리 generator 모델명
 HuggingFaceH4/zephyr-7b-beta
+https://huggingface.co/HuggingFaceH4/zephyr-7b-beta
